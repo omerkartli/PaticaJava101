@@ -1,0 +1,10 @@
+        int l,m ;
+        Scanner input= new Scanner(System.in);
+        l=input.nextInt();//üssü alınacak sayı
+        m=input.nextInt();//üs
+        int sonuc=1;
+        int i=1;
+        for (i=1; i<=m; i++){
+            sonuc=sonuc*l;
+    }
+        System.out.println(sonuc);

@@ -1,0 +1,38 @@
+package donguler;
+
+import java.util.Scanner;
+
+public class ArmstrongSayi {
+    public static void main(String[] args) {
+         int basNum=0, basValue, number;
+         int result=0;
+         Scanner input =new Scanner(System.in);
+         number = input.nextInt();
+         int tempnumber=number;
+
+         while(tempnumber >0){
+               tempnumber/=10;
+               basNum++;
+            }
+           System.out.println("basmak sayısı = "+basNum);
+         tempnumber=number;
+         while(tempnumber>0){
+             basValue= tempnumber % 10;
+             // System.out.println(basValue);
+              int basPow =1;
+              for(int i=1; i<=basNum; i++){
+                    basPow *= basValue;
+               }
+             //System.out.println(basPow);
+              result+=basPow;
+              tempnumber=tempnumber/ 10;
+        }
+         if (result==number) {
+             System.out.println("sonuc "+ number + " armstrongdur");
+         }
+         else{
+                 System.out.println(number+ "= değil "+result+" armstrong değildir");
+             }
+    }
+
+}

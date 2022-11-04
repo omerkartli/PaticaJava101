@@ -1,0 +1,31 @@
+package Metodlar;
+public class OverloadingMetod {
+
+
+    static void metod(){
+        System.out.println("prametre yok");
+    }
+    static void metod(int a){
+        System.out.println(a);
+    }
+    static void metod(int a, int b){
+        System.out.println(a+b);
+
+    }
+    static double metod (double a, double b){
+        double result =a+b;
+        System.out.println(result);
+        return result;
+    }
+    static void metod(double a){
+        System.out.println(a);
+    }
+
+    public static void main(String[] args) {
+        metod();
+        metod(5);
+        metod(56);
+        metod(45.78,79.45);
+
+    }
+}

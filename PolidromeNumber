@@ -1,0 +1,24 @@
+package Metodlar;
+
+
+
+public class PalindromSayi  {
+    static boolean pol(int number){
+        int tempnumber = number ,reverseNumber=0, lastvalue;
+        while( tempnumber!=0) {
+            lastvalue = tempnumber % 10;
+            reverseNumber =(reverseNumber * 10) + lastvalue;
+            tempnumber /= 10;
+        }
+        if (number==reverseNumber)
+            return true;
+        else
+            return false;
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(pol(242));
+
+    }
+}

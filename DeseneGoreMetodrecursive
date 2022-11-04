@@ -1,0 +1,22 @@
+package Metodlar;
+
+import java.util.Scanner;
+
+public class deseneGoreMetod {
+    
+    static void desen(int n){
+        int result=0;
+        if(n>0) {
+            result += n;
+            System.out.println(result);
+            desen(n-5);
+        }System.out.println(result);
+    }
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        System.out.print("bir sayı giriniz: ");
+        int n= input.nextInt();
+        desen(n);
+    }
+
+}

@@ -1,0 +1,68 @@
+package donguler;
+
+import java.util.Scanner;
+
+public class AtmProject {
+    public static void main(String[] args) {
+        String username, password;
+        Scanner input = new Scanner(System.in);
+        /* username =input.nextLine();
+        //password = input.nextLine();*/
+        int balance = 5000, right = 3;
+        int select;
+        int price;
+
+        while (right > 0) {
+            System.out.print("kullanıcı adı gir: ");
+            username = input.nextLine();
+            System.out.print ("şifre giriniz: ");
+            password = input.nextLine();
+            if (username.equals("omerk") && password.equals("kart")) {
+                System.out.println("Hoşgeldiniz. Seçim yapınız: ");
+                do {
+                    System.out.println("1: para yatır");
+                    System.out.println("2: para çek");
+                    System.out.println("3: bakiye sor");
+                    System.out.println("4: para yatır");
+                    select=input.nextInt();
+                    if (select==1){
+                        System.out.println("ne kadar yatırcan: ");
+                        price=input.nextInt();
+                        balance+=price;
+                        System.out.println("yeni bakiye= "+balance);
+                    }
+                    else if (select==2){
+                        System.out.println("ne kadar çekicen: ");
+                        price=input.nextInt();
+                        if(price>balance){
+                            System.out.println("yetersiz bakiye ");
+                        }
+                        else{
+                        balance-=price;
+                        System.out.println("yeni bakiye= "+balance);
+                        }
+                    }
+                    else if(select==3){
+                        System.out.println("bakiyeniz: "+ balance);
+                    }
+                    else if (select>4 || select<=0){
+                        System.out.println("geçersiz seçim lütfen 1 ile 4 arası seçim yapın");
+                    }
+                }
+                while (select!= 4);
+                    System.out.println("see you");
+                    break;
+                }
+            else{
+                right--;
+                System.out.println("yanlış şifre veya kullanıcı adı tekrar dene kalan hak:" + right);
+                if (right == 0) {
+                    System.out.println("hesabınız bloke oldu bankayla iletişime geçin");
+                }
+            }
+            }
+
+
+        }
+    }
+

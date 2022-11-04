@@ -1,0 +1,41 @@
+package Metodlar;
+
+import java.util.Scanner;
+
+public class ExpOfBaseCalc {
+
+    /*static void powNum(){
+        int base, exp;
+        Scanner input= new Scanner(System.in);
+        System.out.print("taban değeri giriniz: ");
+        base =input.nextInt();
+        System.out.print("üs değeri giriniz: ");
+        exp =input.nextInt();
+        int result=1;
+        for(int i=0; i<exp; i++){
+            result=result*base;
+        }
+        System.out.println(result);
+    }*/
+    static int powNum2(int base, int exp){
+
+        if(base==0) {
+            return 0;
+        }
+        else if (exp == 0){
+            return 1;
+        }
+        else{
+            return powNum2(base,exp-1)*base;
+        }
+    }
+    public static void main(String[] args) {
+        int base, exp;
+        Scanner input =new Scanner(System.in);
+        System.out.println("Taban değeri giriniz :");
+        base=input.nextInt();
+        System.out.println("Üs değerini giriniz : ");
+        exp=input.nextInt();
+        System.out.println("sonuç: "+powNum2(base,exp));
+    }
+}

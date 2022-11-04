@@ -17,8 +17,7 @@ public class isPrimeNumber {
         Scanner input =new Scanner(System.in);
         System.out.print("sayı gir:");
         int n=input.nextInt();
-        System.out.print("sayının 1 eksiğini gir:");
-        int i=input.nextInt();
+        int i=n-1;
         System.out.println("sayı prime mı? \n"+ isPrime(n,i));
 
         }

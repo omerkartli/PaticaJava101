@@ -1,0 +1,27 @@
+package Metodlar;
+
+import java.util.Scanner;
+
+public class isPrimeNumber {
+
+    static boolean isPrime(int n, int i/*i is n-1*/){
+        if(i==1)
+            return true;
+        else if(n%i==0)
+             return false;
+        else
+            return isPrime(n,i-1);
+    }
+
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+        System.out.print("sayı gir:");
+        int n=input.nextInt();
+        System.out.print("sayının 1 eksiğini gir:");
+        int i=input.nextInt();
+        System.out.println("sayı prime mı? \n"+ isPrime(n,i));
+
+        }
+
+    }
+

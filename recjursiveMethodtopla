@@ -1,0 +1,27 @@
+package Metodlar;
+public class RecursiveMetod {
+
+    /*static int f (int a){
+        int result=0;
+        for(int i=0; i<=a; i++){
+            result+=i;
+        }
+        System.out.println(result);
+        return result;
+    }*/
+    static int f( int n){
+        if (n==1){
+            return 1;
+        }
+        int result=  f(n-1)+n;
+        System.out.println(result);//result = 4+f(3) --> result 3+f(2) --> 2+ f(1) --> 1 döner.
+        // f1 i bir buldu sonra f1 yerine koy f2 bul sonra f2 yerine koy f3 bu ... f4 bul
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(f(4));
+
+    }
+
+
+}

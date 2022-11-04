@@ -1,0 +1,22 @@
+package Metodlar;
+
+public class Metotlar1 {
+
+    static int power(int base, int exp){
+        int result=1;
+        for(int i=1; i<exp; i++) {
+            result *= base;
+        }
+        System.out.println(result);
+        return result;
+    }
+    static void helloMetot(){
+        System.out.println("metodlara başladım ya");
+    }
+
+    public static void main(String[] args) {
+        power(2,3);
+        power(5,5);
+        helloMetot();
+    }
+}

@@ -1,0 +1,29 @@
+package OgrenciBilgiSistemi;
+
+public class Main  {
+    public static void main(String[] args) {
+        Teacher t1= new Teacher("ömer kartlı", "555555", "TRH");
+        Teacher t2 = new Teacher("kemal","100","FZK");
+        Teacher t3 = new Teacher("kül yutmaz","145","BIO");
+
+        Course tarih =new Course("Tarih","101","TRH",t1);
+        tarih.addTeacher(t1);
+
+        Course fizik = new Course("Fizik","103","FZK",t2);
+        fizik.addTeacher(t2);
+
+        Course biyo= new Course("Biyoloji","102","BIO",t3);
+        biyo.addTeacher(t3);
+
+
+        Student s1= new Student("Şaban","123","4",tarih,fizik,biyo);
+        s1.addBulkExamNote(100,0,66);
+        s1.isPass();
+
+        Student s2=new Student("osman","1010","5",tarih,fizik,biyo);
+        s1.addBulkExamNote(100,45,55);
+        s2.isPass();
+
+    }
+
+}

@@ -1,0 +1,23 @@
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+root 7 soluna 5 
+
+root 5 soluna 1 sağına 7
+
+root 5 soluna 3 sağına 7 onun sağına 8
+
+root 5 soluna 1 onun  sağına 3, 5 in sağına 7 onun sağına 8 
+
+aynı 7 nin soluna 6 
+
+aynı 1 in soluna 0 ekle
+
+aynı 8in sağına 9
+
+aynı 3 ün sağına 4
+
+aynı 3 ün soluna 2
+
+Binary tree Time complexity o(logn) dengeliyse
+
+dengeli değilse o(n)
